@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LunaPaws</string>
+    <string name="toolbar_string">Welcome</string>
+    <string name="toolbar_string_note">Exit</string>
+    <string name="loadingActivity">Loading...</string>
+    <string name="map_description">This is a map view showing the location.</string>
+</resources>

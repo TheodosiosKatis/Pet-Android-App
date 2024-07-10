@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#35455f"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent">
+
+        <!-- Logo Image -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/logo"
+            app:civ_border_color="#ffffff"
+            app:civ_border_width="2dp" />
+
+        <!-- Username Textview -->
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText2"
+            android:layout_alignStart="@+id/editText2"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="-141dp"
+            android:backgroundTint="#a5b3b5"
+            android:drawableLeft="@drawable/ic_tag_faces"
+            android:drawablePadding="10dp"
+            android:hint="Username"
+            android:paddingVertical="10dp"
+            android:text=""
+            android:textColor="#a5b3b5"
+            android:textColorHint="#a5b3b5"
+            android:textSize="30dp" />
+
+        <!-- Password Textview -->
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/circleImageView"
+            android:layout_alignStart="@+id/button"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="183dp"
+            android:backgroundTint="#a5b3b5"
+            android:drawableLeft="@drawable/ic_lock_outline"
+            android:drawablePadding="15dp"
+            android:hint="Password"
+            android:paddingVertical="10dp"
+            android:password="true"
+            android:text=""
+            android:textColor="#a5b3b5"
+            android:textColorHint="#a5b3b5"
+            android:textSize="30dp" />
+
+        <!-- Show/Not show Password value -->
+        <ImageButton
+            android:id="@+id/passwordVisibilityToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/editText2"
+            android:layout_alignBottom="@id/editText2"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="17dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Toggle password visibility"
+            android:src="@drawable/ic_visibility_off" />
+
+        <!-- Forgot Password TextView/button -->
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/editText2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="32dp"
+            android:text="Forget password ?"
+            android:textColor="#a5b3b5"
+            android:textSize="25dp" />
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:width="290dp"
+            android:background="@drawable/rounded_button_background"
+            android:padding="20dp"
+            android:text="LOGIN"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+        <!-- Close Keyboard Button -->
+        <ImageButton
+            android:id="@+id/closeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_close_imagebutton_background"
+            android:src="@drawable/ic_close_keyboard"
+            android:visibility="gone" />
+
+        <!-- Text which will display Errors at 'login' -->
+        <TextView
+            android:id="@+id/errorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:textColor="#FF0000"
+            android:textSize="16sp"
+            android:visibility="gone"
+            tools:text="Username or password is wrong" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
